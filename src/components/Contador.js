@@ -9,13 +9,13 @@ class Contador extends Component {
         }
     }
 
-    incrementar() {
+    incrementar = () => {
         this.setState({
             contador: this.state.contador + 1
         });
     }
 
-    decrementar() {
+    decrementar = () => {
         this.setState({
             contador: this.state.contador - 1
         });
@@ -27,9 +27,9 @@ class Contador extends Component {
                 <h1>{ this.state.contador }</h1>
 
                 <div>
-                    <button onClick={ this.decrementar.bind(this) }>-</button>
+                    <button onClick={ this.decrementar }>-</button>
 
-                    <button onClick={ this.incrementar.bind(this) }>+</button>
+                    <button onClick={ this.incrementar }>+</button>
                 </div>
             </div>
         );
